@@ -6,6 +6,7 @@ import { Services } from './pages/Services/index.jsx'
 import { Navbar } from './components/Navbar/index.jsx'
 import { Footer } from './components/Footer/index.jsx'
 import { Layout } from './components/Layout/index.jsx'
+import { AboutSection } from './pages/about/index.jsx'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/projects" element={<Projects/>} />
         <Route path="/services" element={<Services/>} />
+        <Route path="/about" element={<AboutSection/>} />
       </Routes>
     )
   }

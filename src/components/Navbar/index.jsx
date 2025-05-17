@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CiLinkedin } from "react-icons/ci"
+import { CiLinkedin, CiUser  } from "react-icons/ci"
 import { RiHome9Fill } from "react-icons/ri"
 import { IoIosArrowRoundUp, IoLogoGithub } from "react-icons/io"
 import { FaProjectDiagram, FaTools } from "react-icons/fa"
@@ -55,7 +55,7 @@ function Navbar() {
     { to: "/", icon: RiHome9Fill, label: "Home" },
     { to: "/projects", icon: FaProjectDiagram, label: "Projects" },
     { to: "/services", icon: FaTools, label: "Services" },
-    { to: "/about", icon: FaTools, label: "about" }
+    { to: "/about", icon: CiUser, label: "about" }
   ]
 
   const connectItems = [
