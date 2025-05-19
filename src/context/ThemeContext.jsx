@@ -4,10 +4,26 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [visibleMenuMovile, setVisibleMenuMovile] = useState(false)
-
+  const [isMobile, setIsMobile] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
-  });
+  })
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const isMobileDevice = 
+        window.innerWidth <= 768 || 
+        ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+      
+      setIsMobile(isMobileDevice);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, [])
+
 
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
@@ -26,7 +42,11 @@ export const ThemeProvider = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ 
       visibleMenuMovile,
+      isMobile,
+      setIsMobile,
       setVisibleMenuMovile,
+
+
       darkMode,
       toggleDarkMode }}>
       {children}
