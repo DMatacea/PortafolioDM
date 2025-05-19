@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CiLinkedin, CiUser  } from "react-icons/ci"
+import { CiLinkedin, CiUser } from "react-icons/ci"
 import { RiHome9Fill } from "react-icons/ri"
 import { IoIosArrowRoundUp, IoLogoGithub } from "react-icons/io"
 import { FaProjectDiagram, FaTools } from "react-icons/fa"
@@ -59,27 +59,29 @@ function Navbar() {
   ]
 
   const connectItems = [
-    { 
-      to: "https://www.linkedin.com/in/davidmatacea-dev", 
-      icon: CiLinkedin, 
-      label: "LinkedIn", 
-      external: true 
+    {
+      to: "https://www.linkedin.com/in/davidmatacea-dev",
+      icon: CiLinkedin,
+      label: "LinkedIn",
+      external: true
     },
-    { 
-      to: "https://github.com/DMatacea", 
-      icon: IoLogoGithub, 
-      label: "GitHub", 
-      external: true 
+    {
+      to: "https://github.com/DMatacea",
+      icon: IoLogoGithub,
+      label: "GitHub",
+      external: true
     }
   ]
 
   return (
-    <nav className="flex flex-col h-screen justify-between items-center w-1/5 bg-gray-800 px-6 py-4">
-      <div className="text-xl font-semibold text-white">
+    <nav className="flex md:flex-col items-center justify-between w-full md:w-1/5 md:bg-gray-800 px-4 md:px-6 py-2 md:py-4 fixed bottom-0 md:static z-50 h-[60px] md:h-screen">
+      {/* Título solo visible en desktop */}
+      <div className="hidden md:block text-xl font-semibold text-white mb-4">
         <Link to="/">Front-End Developer</Link>
       </div>
-      
-      <div className="flex flex-col w-full items-center text-sm">
+
+      {/* Navegación principal en desktop */}
+      <div className="hidden md:flex flex-col w-full items-center text-sm">
         {navItems.map((item, index) => (
           <NavSection key={index}>
             <NavItem {...item} />
@@ -87,24 +89,27 @@ function Navbar() {
           </NavSection>
         ))}
       </div>
-      
-      <section className="flex flex-col w-full">
+
+      {/* Barra inferior para móviles */}
+
+      {/* Sección CONNECT en desktop */}
+      <section className="hidden md:flex flex-col w-full mb-4">
         <span className="text-lg font-mono">CONNECT</span>
-        
+
         {connectItems.map((item, index) => (
           <NavSection key={index}>
             <NavItem {...item} />
             <NavArrow to={item.to} external />
           </NavSection>
         ))}
-        
+
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=davde40@gmail.com&su=Consulta%20sobre%20tu%20portfolio&body=Hola,%20me%20interesa%20tu%20trabajo..."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 mt-8 font-mono px-2 py-2 rounded-lg hover:bg-gray-600 transition"
         >
-          <FiMail className="ml-1 mr-3.5" />
+          <FiMail className="ml-1 mr-3.5" size={20} />
           Contáctame
         </a>
       </section>

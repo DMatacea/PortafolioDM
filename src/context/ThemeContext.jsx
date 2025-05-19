@@ -3,6 +3,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
+  const [visibleMenuMovile, setVisibleMenuMovile] = useState(false)
+
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
@@ -22,7 +24,11 @@ export const ThemeProvider = ({ children }) => {
   }, [darkMode]);
 
   return (
-    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
+    <ThemeContext.Provider value={{ 
+      visibleMenuMovile,
+      setVisibleMenuMovile,
+      darkMode,
+      toggleDarkMode }}>
       {children}
     </ThemeContext.Provider>
   )

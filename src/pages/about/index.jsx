@@ -16,7 +16,7 @@ function AboutSection() {
               <img 
                 src={foto} 
                 alt="Foto-personal" 
-                className="h-[400px] h-[230px] object-cover rounded-lg"
+                className="object-cover rounded-lg"
                 />
             </div>
           </div>

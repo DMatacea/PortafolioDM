@@ -1,8 +1,13 @@
+import { MobileBottomBar } from "../Navbar/MovileMenu"
+
 function Layout({ children }) {
     return(
-        <main>
-            {children}
-        </main>
+        <>
+            <main>
+                {children}
+            </main>
+            <MobileBottomBar/>
+        </>
     )
 }
   
