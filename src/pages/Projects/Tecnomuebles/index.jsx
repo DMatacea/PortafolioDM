@@ -12,11 +12,14 @@ import ProjectImage3 from '../../../assets/TecnoMuebles/PanelAdmin.png'
 import ProjectImage4 from '../../../assets/TecnoMuebles/NuevosPedidos.png'
 import ProjectImage5 from '../../../assets/TecnoMuebles/ListaDePedidos.png'
 import ProjectImage6 from '../../../assets/TecnoMuebles/CreateModal.png'
+import ProjectImage7 from '../../../assets/TecnoMuebles/Response1.png'
+import ProjectImage8 from '../../../assets/TecnoMuebles/Response2.png'
+import ProjectImage9 from '../../../assets/TecnoMuebles/Response3.png'
 
 function Tecnomuebles() {
     const { isMobile } = useContext(ThemeContext)
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null)
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
       const sliderSettings = {
         dots: true,
@@ -35,17 +38,17 @@ function Tecnomuebles() {
         mobileFirst: true,
     }
 
-    const Images = [ProjectImage1, ProjectImage2, ProjectImage3, ProjectImage4, ProjectImage5, ProjectImage6]
+    const Images = [ProjectImage1, ProjectImage2, ProjectImage3, ProjectImage4, ProjectImage5, ProjectImage6, ProjectImage7, ProjectImage8, ProjectImage9]
 
     const openModal = (image) => {
-        setSelectedImage(image);
-        setIsModalOpen(true);
-    };
+        setSelectedImage(image)
+        setIsModalOpen(true)
+    }
 
     const closeModal = () => {
-        setIsModalOpen(false);
-        setTimeout(() => setSelectedImage(null), 300); // Espera a que termine la animación
-    };
+        setIsModalOpen(false)
+        setTimeout(() => setSelectedImage(null), 300)
+    }
 
     return (
         <div className="min-h-screen bg-[#EBF4F6] text-[#071952]">

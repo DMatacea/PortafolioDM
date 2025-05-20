@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import TecnoMuebles from "../../assets/TecnoMuebles/TecnoMuebles.png"
 import ListtaskCSS from "../../assets/ListtaskCSS.png"
 import PaginaEcommerce from "../../assets/PaginaEcommerce.png"
-import ListtaskTailwindCSS from "../../assets/ListtaskTailwindCSS.png"
+import ListtaskTailwindCSS from "../../assets/ListTaskTailwindCSS/ListtaskTailwindCSS.png"
 
 function Projects() {
   const projects = [
