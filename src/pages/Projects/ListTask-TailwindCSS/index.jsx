@@ -69,7 +69,7 @@ function ListTaskTailwindCSS() {
         <section className="py-16 px-6 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-10 text-center">Descripción del Proyecto</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div className="order-1">
                     <p className="text-lg mb-6">
                     Esta aplicación permite gestionar tus tareas de forma dinámica: puedes crear, completar, filtrar y eliminar tareas en una interfaz clara.
                     </p>

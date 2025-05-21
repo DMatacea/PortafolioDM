@@ -21,7 +21,7 @@ function Tecnomuebles() {
     const [selectedImage, setSelectedImage] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
 
-      const sliderSettings = {
+    const sliderSettings = {
         dots: true,
         infinite: true,
         autoplay: true,
@@ -77,8 +77,8 @@ function Tecnomuebles() {
             {/* Project Overview */}
              <section className="py-16 px-6 max-w-6xl mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-center">Descripción del Proyecto</h2>
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
+                <div className="grid md:grid-cols-2 gap-12  items-center">
+                    <div className="order-1">
                         <p className="text-lg mb-6">
                         Sistema completo para gestión de pedidos entre distribuidores y administradores,
                         con autenticación segura y actualizaciones en tiempo real.
