@@ -176,7 +176,7 @@ function ListTaskCSS() {
             {/* Features - Responsive Grid */}
             <section className="py-12 md:py-16 px-4 md:px-6 bg-[#f7fbfc]">
                 <div className="max-w-6xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Características Principales</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Funcionalidades Principales</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {[
                     {
@@ -209,24 +209,32 @@ function ListTaskCSS() {
 
             {/* Call to Action - Responsive */}
             <section className="py-12 md:py-20 px-4 md:px-6 text-center">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">¿Quieres probar la demo?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">¿Quieres explorar el proyecto en acción?</h2>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a
-                    href="https://dmatacea.github.io/ListTask/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#071952] hover:bg-[#0a2463] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors"
-                >
-                    Versión Básica
-                </a>
-                <a
-                    href="https://dmatacea.github.io/ListTask-TailwindCSS/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#088395] hover:bg-[#37B7C3] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors"
-                >
-                    Versión Avanzada
-                </a>
+                    <a
+                        href="https://dmatacea.github.io/ListTask/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-[#071952] hover:bg-[#0a2463] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors"
+                    >
+                        Versión Básica
+                    </a>
+                    <a
+                        href="https://github.com/Dmatacea/ListTask/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-[#071952] hover:bg-[#0a2463] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors"
+                    >
+                        Código en GitHub
+                    </a>
+                    <a
+                        href="https://dmatacea.github.io/ListTask-TailwindCSS/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-[#088395] hover:bg-[#37B7C3] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors"
+                    >
+                        Versión Avanzada
+                    </a>
                 </div>
             </section>
 

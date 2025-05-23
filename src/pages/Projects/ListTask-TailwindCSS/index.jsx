@@ -160,10 +160,44 @@ function ListTaskTailwindCSS() {
             </div>
         </section>
 
+        {/* Technical Details - Responsive */}
+            <section className="py-12 md:py-16 px-4 md:px-6 bg-[#071952] text-[#EBF4F6]">
+                <div className="max-w-6xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Arquitectura Técnica</h2>
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8">
+                    <div>
+                    <h3 className="text-xl font-semibold mb-3 md:mb-4">Tecnologías Clave</h3>
+                    <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+                        <li>• React 18 con Hooks API</li>
+                        <li>• Tailwind CSS v3</li>
+                        <li>• Context API para estado global</li>
+                        <li>• React Router v6</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h3 className="text-xl font-semibold mb-3 md:mb-4">Código Destacado</h3>
+                    <div className="bg-black p-3 md:p-4 rounded-lg overflow-x-auto scrollbar-hide">
+                        <pre className="text-[#37B7C3] text-xs md:text-sm font-mono whitespace-pre">
+    {`// Persistencia con localStorage
+    const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem('tasks');
+    return saved ? JSON.parse(saved) : [];
+    });
+
+    useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks]);`}
+                        </pre>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
         {/* Funcionalidades Clave */}
         <section className="py-16 px-6 bg-[#f7fbfc]">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold mb-12 text-center">Funcionalidades Clave</h2>
+                <h2 className="text-3xl font-bold mb-12 text-center">Funcionalidades Principales</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                     {
@@ -193,15 +227,25 @@ function ListTaskTailwindCSS() {
         </section>
         {/* Call to Action */}
         <section className="py-20 px-6 text-center">
-            <h2 className="text-3xl font-bold mb-6">¿Quieres ver el proyecto en acción?</h2>
-            <a
-                href="https://dmatacea.github.io/ListTask-TailwindCSS/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#088395] hover:bg-[#37B7C3] text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors"
-            >
-            Ver Demo en Vivo
-            </a>
+            <h2 className="text-3xl font-bold mb-6">¿Quieres explorar el proyecto en acción?</h2>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a
+                    href="https://dmatacea.github.io/ListTask-TailwindCSS/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#088395] hover:bg-[#37B7C3] text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors"
+                >
+                Ver Demo en Vivo
+                </a>
+                <a
+                    href="https://github.com/Dmatacea/ListTask-TailwindCSS/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#071952] hover:bg-[#0a2463] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors"
+                >
+                    Código en GitHub
+                </a>
+            </div>
         </section>
     </div>
   )

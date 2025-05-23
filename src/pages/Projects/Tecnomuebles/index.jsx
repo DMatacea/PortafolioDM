@@ -84,18 +84,18 @@ function Tecnomuebles() {
                         con autenticación segura y actualizaciones en tiempo real.
                         </p>
                         <ul className="space-y-4">
-                        <li className="flex items-start gap-3">
-                            <FaGoogle className="text-[#088395] mt-1" />
-                            <span>Autenticación con Firebase (Email y Google)</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <FaFilter className="text-[#088395] mt-1" />
-                            <span>CRUD de productos con filtros avanzados</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <FaMobileAlt className="text-[#088395] mt-1" />
-                            <span>Diseño completamente responsive</span>
-                        </li>
+                            <li className="flex items-start gap-3">
+                                <FaGoogle className="text-[#088395] mt-1" />
+                                <span>Autenticación con Firebase (Email y Google)</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <FaFilter className="text-[#088395] mt-1" />
+                                <span>CRUD de productos con filtros avanzados</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <FaMobileAlt className="text-[#088395] mt-1" />
+                                <span>Diseño completamente responsive</span>
+                            </li>
                         </ul>
                     </div>
                     { isMobile ? 
@@ -154,10 +154,48 @@ function Tecnomuebles() {
                 />
             )}
 
+            {/* Technical Details */}
+            <section className="py-12 md:py-16 px-4 md:px-6 bg-[#071952] text-[#EBF4F6]">
+                <div className="max-w-6xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Arquitectura Técnica</h2>
+                    <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8">
+                        <div>
+                            <h3 className="text-xl font-semibold mb-3 md:mb-4">Tecnologías Clave</h3>
+                            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+                                <li>• Firebase Authentication</li>
+                                <li>• Firestore Database</li>
+                                <li>• Cloud Firestore (NoSQL)</li>
+                                <li>• React 18 con Hooks API</li>
+                                <li>• Tailwind CSS v3</li>
+                                <li>• Context API para estado global</li>
+                                <li>• React Router v6</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-3 md:mb-4">Implementación Clave</h3>
+                            <div className="bg-black p-3 md:p-4 rounded-lg overflow-x-auto scrollbar-hide">
+                                <pre className="text-[#37B7C3] text-xs md:text-sm font-mono whitespace-pre">
+{`// Ejemplo, verificar estado de autenticación al cargar
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user)
+        navigate('/dashboard')
+      }
+    })
+    return () => unsubscribe()
+  }, [auth, navigate])`}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Features */}
             <section className="py-16 px-6 bg-[#f7fbfc]">
                 <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold mb-12 text-center">Funcionalidades Clave</h2>
+                <h2 className="text-3xl font-bold mb-12 text-center">Funcionalidades Principales</h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Feature Card */}
@@ -212,38 +250,6 @@ function Tecnomuebles() {
                     <h3 className="text-xl font-semibold">Dashboard Administrador</h3>
                     <p>Gestión de productos y pedidos</p>
                 </div>
-                </div>
-            </section>
-
-            {/* Technical Details */}
-            <section className="py-16 px-6 bg-[#071952] text-[#EBF4F6]">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-8 text-center">Detalles Técnicos</h2>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 className="text-xl font-semibold mb-4">Tech Stack</h3>
-                            <ul className="space-y-3">
-                                <li>React 18 (Hooks API)</li>
-                                <li>Firebase Authentication</li>
-                                <li>Cloud Firestore (NoSQL)</li>
-                                <li>Tailwind CSS v3</li>
-                                <li>Context API para estado global</li>
-                            </ul>
-                        </div>
-                        <div className="overflow-hidden">
-                            <h3 className="text-xl font-semibold mb-4">Código Destacado</h3>
-                            <div className="bg-black p-4 rounded-lg overflow-x-auto scrollbar-hide text-[#37B7C3] text-sm font-mono">
-                                <pre className="text-[#37B7C3] text-sm font-mono whitespace-pre">
-{`// Ejemplo de reglas de seguridad Firestore
-    match /pedidos/{pedidoId} {
-    allow read, write: if 
-        request.auth != null && 
-        request.auth.token.role in ['admin', 'distribuidor'];
-}`}
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
