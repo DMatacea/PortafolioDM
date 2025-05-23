@@ -29,7 +29,7 @@ function AppContent() {
   const AppRoutes = () => {
     return(
       <Routes basename='/DavidMatacea'>
-        <Route path="/" element={<Home/>} />
+        <Route path="/PortafolioDM" element={<Home/>} />
         <Route path="/services" element={<Services/>} />
         <Route path="/about" element={<AboutSection/>} />
         <Route path="/projects" element={<Projects/>} />

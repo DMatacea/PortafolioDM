@@ -52,7 +52,7 @@ const NavSection = ({ children }) => (
 
 function Navbar() {
   const navItems = [
-    { to: "/", icon: RiHome9Fill, label: "Home" },
+    { to: "/PortafolioDM", icon: RiHome9Fill, label: "Home" },
     { to: "/projects", icon: FaProjectDiagram, label: "Proyectos" },
     { to: "/services", icon: FaTools, label: "Servicios" },
     { to: "/about", icon: CiUser, label: "Sobre mi" }

@@ -24,7 +24,7 @@ function MobileBottomBar() {
       <div className="flex items-center justify-around w-full h-full px-4">
         {!expanded ? (
           <>
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/PortafolioDM" className="text-gray-300 hover:text-white transition-colors">
               <RiHomeFill size={24} />
             </Link>
             <Link to="/projects" className="text-gray-300 hover:text-white transition-colors">
