@@ -3,7 +3,7 @@ import { MobileBottomBar } from "../Navbar/MovileMenu"
 function Layout({ children }) {
     return(
         <>
-            <main>
+            <main className="relative">
                 {children}
             </main>
             <MobileBottomBar/>

@@ -52,10 +52,10 @@ const NavSection = ({ children }) => (
 
 function Navbar() {
   const navItems = [
-    { to: "/PortafolioDM", icon: RiHome9Fill, label: "Home" },
-    { to: "/projects", icon: FaProjectDiagram, label: "Proyectos" },
-    { to: "/services", icon: FaTools, label: "Servicios" },
-    { to: "/about", icon: CiUser, label: "Sobre mi" }
+    { to: "/PortafolioDM", icon: RiHome9Fill, label: "Inicio" },
+    { to: "/PortafolioDM/projects", icon: FaProjectDiagram, label: "Proyectos" },
+    { to: "/PortafolioDM/services", icon: FaTools, label: "Servicios" },
+    { to: "/PortafolioDM/about", icon: CiUser, label: "Sobre mi" }
   ]
 
   const connectItems = [

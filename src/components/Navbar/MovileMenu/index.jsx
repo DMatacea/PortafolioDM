@@ -10,32 +10,48 @@ import { FaMagic, FaUserAlt, FaTools, FaProjectDiagram } from "react-icons/fa"
 function MobileBottomBar() {
   const context = useContext(ThemeContext)
   const [expanded, setExpanded] = useState(false)
+  const [activeItem, setActiveItem] = useState(null)
 
+  const handleItemClick = (itemName) => {
+    setActiveItem(activeItem === itemName ? null : itemName)
+  }
+
+  const navItems = [
+    { name: "home", icon: <RiHomeFill size={24} />, text: "Inicio", to: "/PortafolioDM" },
+    { name: "projects", icon: <FaProjectDiagram size={20} />, text: "Projectos", to: "/PortafolioDM/projects" },
+    { name: "services", icon: <FaTools size={20} />, text: "Servicios", to: "/PortafolioDM/services" },
+    { name: "about", icon: <FaUserAlt size={20} />, text: "Sobre mi", to: "/PortafolioDM/about" }
+  ]
+
+  const socialItems = [
+    { name: "linkedin", icon: <CiLinkedin size={22} />, href: "https://www.linkedin.com/in/davidmatacea-dev" },
+    { name: "github", icon: <IoLogoGithub size={22} />, href: "https://github.com/DMatacea" },
+    { name: "email", icon: <FiMail size={20} />, href: "https://mail.google.com/mail/?view=cm&fs=1&to=davde40@gmail.com" }
+  ]
 
   return (
-    <div
-      className={`
-        fixed bottom-0 left-0 w-full h-14 bg-gray-900 text-white z-50
-        transition-transform duration-500 ease-in-out 
-        ${ !expanded ? (context.visibleMenuMovile ? "translate-y-0" : "translate-y-full") : ("translate-y-0")}
-        md:hidden
-      `}
-    >
+    <div className={`
+      fixed bottom-0 left-0 w-full h-14 bg-gray-900 text-white z-50
+      transition-transform duration-500 ease-in-out 
+      ${!expanded ? (context.visibleMenuMovile ? "translate-y-0" : "translate-y-full") : "translate-y-0"}
+      md:hidden
+    `}>
       <div className="flex items-center justify-around w-full h-full px-4">
         {!expanded ? (
           <>
-            <Link to="/PortafolioDM" className="text-gray-300 hover:text-white transition-colors">
-              <RiHomeFill size={24} />
-            </Link>
-            <Link to="/projects" className="text-gray-300 hover:text-white transition-colors">
-              <FaProjectDiagram size={20} />
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              <FaTools size={20} />
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              <FaUserAlt size={20} />
-            </Link>
+            {navItems.map((item) => (
+              <Link 
+                key={item.name}
+                to={item.to}
+                className="text-gray-300 hover:text-white transition-colors flex flex-col items-center"
+                onClick={() => handleItemClick(item.name)}
+              >
+                {item.icon}
+                {activeItem === item.name && (
+                  <span className="text-xs mt-1 text-white">{item.text}</span>
+                )}
+              </Link>
+            ))}
             <button 
               onClick={() => setExpanded(true)} 
               className="text-gray-300 hover:text-white transition-colors"
@@ -46,19 +62,21 @@ function MobileBottomBar() {
           </>
         ) : (
           <>
-            <a href="https://www.linkedin.com/in/davidmatacea-dev" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-              <CiLinkedin size={22} />
-            </a>
-            <a href="https://github.com/DMatacea" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-              <IoLogoGithub size={22} />
-            </a>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=davde40@gmail.com&su=Consulta%20sobre%20tu%20portfolio&body=Hola,%20me%20interesa%20tu%20trabajo..."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              <FiMail className="ml-1 mr-3.5" size={20} />            </a>
+            {socialItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors flex flex-col items-center"
+                onClick={() => handleItemClick(item.name)}
+              >
+                {item.icon}
+                {activeItem === item.name && (
+                  <span className="text-xs mt-1 text-white capitalize">{item.name}</span>
+                )}
+              </a>
+            ))}
             <button 
               onClick={() => setExpanded(false)} 
               className="text-gray-300 hover:text-white transition-colors"

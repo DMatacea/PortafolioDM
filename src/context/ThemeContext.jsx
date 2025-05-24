@@ -1,12 +1,13 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [visibleMenuMovile, setVisibleMenuMovile] = useState(false)
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
+  const [showTooltip, setShowTooltip] = useState(true)
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
+    return localStorage.getItem("theme") === "dark"
   })
 
   useEffect(() => {
@@ -43,6 +44,8 @@ export const ThemeProvider = ({ children }) => {
     <ThemeContext.Provider value={{ 
       visibleMenuMovile,
       isMobile,
+      showTooltip,
+      setShowTooltip,
       setIsMobile,
       setVisibleMenuMovile,
 
