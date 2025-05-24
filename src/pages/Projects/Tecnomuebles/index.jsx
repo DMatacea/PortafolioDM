@@ -2,9 +2,10 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick'
 import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
 import { ThemeContext } from "../../../context/ThemeContext"
 import { ImageModal } from "../../../components/ImageModal"
-import { FaReact, FaGoogle, FaFilter, FaMobileAlt } from 'react-icons/fa'
+import { FaReact, FaGoogle, FaFilter, FaMobileAlt, FaArrowLeft } from 'react-icons/fa'
 import { SiFirebase, SiTailwindcss } from 'react-icons/si'
 import ProjectImage1 from '../../../assets/TecnoMuebles/project-home.png'
 import ProjectImage2 from '../../../assets/TecnoMuebles/TecnoMuebles.png'
@@ -56,7 +57,12 @@ function Tecnomuebles() {
             {/* Hero Section */}
             <section className="py-20 px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
                 <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">Sistema de Pedidos B2B</h1>
+                    <div className="flex items-center justify-center gap-4 mb-4">
+                        <Link to="/PortafolioDM/projects">
+                            <FaArrowLeft size={24}/>
+                        </Link>
+                        <h1 className="text-4xl md:text-6xl font-bold">Sistema de Pedidos B2B</h1>
+                    </div>
                 <p className="text-xl md:text-2xl mb-8">
                     Plataforma completa con autenticación, CRUD y gestión de pedidos
                 </p>

@@ -2,9 +2,10 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick'
 import { useState, useContext } from "react"
+import { Link } from "react-router-dom"
 import { ThemeContext } from "../../../context/ThemeContext"
 import { ImageModal } from "../../../components/ImageModal"
-import { FaListAlt, FaSave } from "react-icons/fa"
+import { FaListAlt, FaSave, FaArrowLeft } from "react-icons/fa"
 import { SiReact, SiCss3 } from "react-icons/si"
 import { GiArtificialIntelligence } from "react-icons/gi"
 import BasicTaskImage1 from '../../../assets/ListTaskCSS/List-1.png'
@@ -50,7 +51,12 @@ function ListTaskCSS() {
             {/* Hero Section - Responsive */}
             <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
                 <div className="max-w-6xl mx-auto">
-                <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 text-center md:text-left">Gestor de Tareas Básico</h1>
+                    <div className="flex items-center justify-center gap-4 mb-4">
+                        <Link to="/PortafolioDM/projects">
+                            <FaArrowLeft size={24}/>
+                        </Link>
+                        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">Gestor de Tareas Básico</h1>
+                    </div>
                 <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
                     Versión esencial con persistencia en localStorage
                 </p>

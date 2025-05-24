@@ -3,10 +3,11 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick'
 import { useState, useContext } from "react"
 import { ThemeContext } from "../../../context/ThemeContext"
-import { ImageModal } from "../../../components/ImageModal"
-import { FaShoppingCart, FaUserLock, FaMobileAlt, FaSearch } from "react-icons/fa"
-import { SiReact, SiTailwindcss, SiFirebase } from "react-icons/si"
+import { Link } from "react-router-dom"
+import { FaShoppingCart, FaUserLock, FaMobileAlt, FaSearch, FaArrowLeft } from "react-icons/fa"
+import { SiReact, SiTailwindcss } from "react-icons/si"
 import { FiPackage } from "react-icons/fi"
+import { ImageModal } from "../../../components/ImageModal"
 import EcommerceImage1 from '../../../assets/Ecommerce/Ecommerce1.png'
 import EcommerceImage2 from '../../../assets/Ecommerce/Ecommerce2.png'
 import EcommerceImage3 from '../../../assets/Ecommerce/Ecommerce3.png'
@@ -53,7 +54,12 @@ function Ecommerce() {
             {/* Hero Section */}
             <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
                 <div className="max-w-6xl mx-auto">
-                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 text-center md:text-left">Ecommerce Moderno</h1>
+                    <div className="flex items-center justify-center gap-4 mb-4">
+                        <Link to="/PortafolioDM/projects">
+                            <FaArrowLeft size={24}/>
+                        </Link>
+                        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">Ecommerce Moderno</h1>
+                    </div>
                     <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
                         Plataforma con autenticación, catálogo y gestion de compras
                     </p>

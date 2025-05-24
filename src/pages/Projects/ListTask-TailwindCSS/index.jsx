@@ -3,9 +3,10 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick'
 import ReactCompareImage from 'react-compare-image'
 import { useState, useContext } from "react"
+import { Link } from "react-router-dom"
 import { ThemeContext } from "../../../context/ThemeContext"
 import { ImageModal } from "../../../components/ImageModal"
-import { FaListAlt, FaFilter, FaCheckSquare } from "react-icons/fa"
+import { FaListAlt, FaFilter, FaCheckSquare, FaArrowLeft } from "react-icons/fa"
 import { SiTailwindcss, SiReact } from "react-icons/si"
 import { GiArtificialIntelligence } from "react-icons/gi"
 import DesignImage from '../../../assets/ListTaskTailwindCSS/DesignImage.png'
@@ -54,14 +55,20 @@ function ListTaskTailwindCSS() {
         {/* Hero Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
             <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Gestor de Tareas</h1>
-            <p className="text-xl md:text-2xl mb-8">
-                Un sistema completo para crear, filtrar y completar tareas.
-            </p>
-            <div className="flex flex-wrap gap-4">
-                <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full"><SiReact /> React</span>
-                <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full"><SiTailwindcss /> TailwindCSS</span>
-            </div>
+                <div className="flex items-center justify-center gap-4 mb-4">
+                    <Link to="/PortafolioDM/projects">
+                    <FaArrowLeft size={24}/>
+                    </Link>
+                    <h1 className="text-4xl md:text-6xl font-bold text-center">Gestor de Tareas</h1>
+                </div>
+                
+                <p className="text-xl md:text-2xl mb-8">
+                    Un sistema completo para crear, filtrar y completar tareas.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                    <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full"><SiReact /> React</span>
+                    <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full"><SiTailwindcss /> TailwindCSS</span>
+                </div>
             </div>
         </section>
 
@@ -132,10 +139,13 @@ function ListTaskTailwindCSS() {
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-4">Comparación Interactiva</h2>
                 <p className="text-lg text-[#071952]/90 mb-10">
-                Diseño personalizado creado por un diseñador UX/UI y su adaptacion a codigo.
+                    Diseño personalizado creado por un diseñador UX/UI y su adaptacion a codigo.
                 </p>
-                <p className="text-lg text-[#071952]/60 mb-2">
-                Desliza la barra para comparar el diseño entregado con la página codificada.
+                <p className="text-lg text-[#071952]/60 mb-2 hidden md:flex">
+                    Desliza la barra para comparar el diseño entregado con la página codificada.
+                </p>
+                <p className="text-lg text-[#071952]/60 mb-2 flex md:hidden">
+                    Pulsa/toca para comparar el diseño entregado con la página codificada.
                 </p>
 
                 <div className="relative rounded-xl shadow-lg overflow-hidden border border-[#cfdfe2]">
