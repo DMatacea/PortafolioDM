@@ -55,12 +55,13 @@ function ListTaskTailwindCSS() {
         {/* Hero Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
             <div className="max-w-6xl mx-auto">
-                <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="flex items-center justify-center gap-4 mb-4 md:hidden">
                     <Link to="/PortafolioDM/projects">
                     <FaArrowLeft size={24}/>
                     </Link>
                     <h1 className="text-4xl md:text-6xl font-bold text-center">Gestor de Tareas</h1>
                 </div>
+                <h1 className="text-4xl md:text-6xl font-bold text-left mb-4">Gestor de Tareas</h1>
                 
                 <p className="text-xl md:text-2xl mb-8">
                     Un sistema completo para crear, filtrar y completar tareas.

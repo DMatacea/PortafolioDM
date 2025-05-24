@@ -51,23 +51,24 @@ function ListTaskCSS() {
             {/* Hero Section - Responsive */}
             <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex items-center justify-center gap-4 mb-4">
+                    <div className="flex items-center justify-center gap-4 mb-4 md:hidden">
                         <Link to="/PortafolioDM/projects">
                             <FaArrowLeft size={24}/>
                         </Link>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">Gestor de Tareas Básico</h1>
                     </div>
-                <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
-                    Versión esencial con persistencia en localStorage
-                </p>
-                <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
-                    <span className="flex items-center gap-2 bg-white/20 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">
-                    <SiReact /> React
-                    </span>
-                    <span className="flex items-center gap-2 bg-white/20 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">
-                    <SiCss3 /> CSS
-                    </span>
-                </div>
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left mb-4">Gestor de Tareas Básico</h1>
+                    <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
+                        Versión esencial con persistencia en localStorage
+                    </p>
+                    <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+                        <span className="flex items-center gap-2 bg-white/20 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">
+                        <SiReact /> React
+                        </span>
+                        <span className="flex items-center gap-2 bg-white/20 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base">
+                        <SiCss3 /> CSS
+                        </span>
+                    </div>
                 </div>
             </section>
 

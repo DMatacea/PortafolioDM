@@ -54,12 +54,13 @@ function Ecommerce() {
             {/* Hero Section */}
             <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex items-center justify-center gap-4 mb-4">
+                    <div className="flex items-center justify-center gap-4 mb-4 md:hidden">
                         <Link to="/PortafolioDM/projects">
                             <FaArrowLeft size={24}/>
                         </Link>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">Ecommerce Moderno</h1>
                     </div>
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left mb-4">Ecommerce Moderno</h1>
                     <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
                         Plataforma con autenticación, catálogo y gestion de compras
                     </p>

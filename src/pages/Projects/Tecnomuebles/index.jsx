@@ -57,26 +57,27 @@ function Tecnomuebles() {
             {/* Hero Section */}
             <section className="py-20 px-6 bg-gradient-to-r from-[#071952] to-[#088395] text-white">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex items-center justify-center gap-4 mb-4">
+                    <div className="flex items-center justify-center gap-4 mb-4 md:hidden">
                         <Link to="/PortafolioDM/projects">
                             <FaArrowLeft size={24}/>
                         </Link>
                         <h1 className="text-4xl md:text-6xl font-bold">Sistema de Pedidos B2B</h1>
                     </div>
-                <p className="text-xl md:text-2xl mb-8">
-                    Plataforma completa con autenticación, CRUD y gestión de pedidos
-                </p>
-                <div className="flex flex-wrap gap-4">
-                    <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                    <FaReact /> React
-                    </span>
-                    <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                    <SiFirebase /> Firebase
-                    </span>
-                    <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                    <SiTailwindcss /> Tailwind CSS
-                    </span>
-                </div>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Sistema de Pedidos B2B</h1>
+                    <p className="text-xl md:text-2xl mb-8">
+                        Plataforma completa con autenticación, CRUD y gestión de pedidos
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                        <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                        <FaReact /> React
+                        </span>
+                        <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                        <SiFirebase /> Firebase
+                        </span>
+                        <span className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                        <SiTailwindcss /> Tailwind CSS
+                        </span>
+                    </div>
                 </div>
             </section>
 
