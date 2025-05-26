@@ -1,4 +1,4 @@
-import { MobileBottomBar } from "../Navbar/MovileMenu"
+import { MobileBottomBar } from "../Navbar/MovileMenuSecundary"
 
 function Layout({ children }) {
     return(

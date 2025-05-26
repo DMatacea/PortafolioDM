@@ -63,7 +63,7 @@ function Tecnomuebles() {
                         </Link>
                         <h1 className="text-4xl md:text-6xl font-bold">Sistema de Pedidos B2B</h1>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Sistema de Pedidos B2B</h1>
+                    <h1 className="hidden md:flex text-4xl md:text-6xl font-bold mb-4">Sistema de Pedidos B2B</h1>
                     <p className="text-xl md:text-2xl mb-8">
                         Plataforma completa con autenticación, CRUD y gestión de pedidos
                     </p>

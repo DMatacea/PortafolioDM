@@ -57,7 +57,7 @@ function ListTaskCSS() {
                         </Link>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">Gestor de Tareas Básico</h1>
                     </div>
-                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left mb-4">Gestor de Tareas Básico</h1>
+                    <h1 className="hidden md:flex text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left mb-4">Gestor de Tareas Básico</h1>
                     <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
                         Versión esencial con persistencia en localStorage
                     </p>

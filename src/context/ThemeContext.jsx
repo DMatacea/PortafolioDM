@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [visibleMenuMovile, setVisibleMenuMovile] = useState(false)
+  const [visibleMenuMovile, setVisibleMenuMovile] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
   const [showTooltip, setShowTooltip] = useState(true)
   const [darkMode, setDarkMode] = useState(() => {

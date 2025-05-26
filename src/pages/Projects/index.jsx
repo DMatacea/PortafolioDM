@@ -43,7 +43,7 @@ function Projects() {
       <div className="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 gap-8 justify-items-center">
         {projects.map((project, idx) => (
           <Link to={`/PortafolioDM/projects/${project.slug}`} key={idx} className="w-full max-w-[420px]">
-            <div className="aspect-[16/9] group relative overflow-hidden rounded-lg border border-gray-700 bg-gray-800 transition duration-500 hover:cursor-pointer">
+            <div className="aspect-[16/9] group relative overflow-hidden bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
               
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -60,7 +60,6 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-500"></div>
             </div>
           </Link>
         ))}

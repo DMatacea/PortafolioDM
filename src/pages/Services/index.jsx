@@ -43,7 +43,7 @@ function Services() {
   ]
 
   return (
-    <section className="px-6 md:px-20 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="px-6 md:px-20 py-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Servicios de Desarrollo Profesional</h2>

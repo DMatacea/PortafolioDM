@@ -7,8 +7,35 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        growTriangle: {
+          '0%': {
+            'border-top-width': '0',
+            'border-right-width': '0',
+          },
+          '100%': {
+            'border-top-width': '30vw',
+            'border-right-width': '50vh',
+          },
+        },
+        growTriangleMobile: {
+          '0%': {
+            'border-top-width': '0',
+            'border-right-width': '0',
+          },
+          '100%': {
+            'border-top-width': '100vw',
+            'border-right-width': '40vh',
+          },
+        },
+      },
+      animation: {
+        'grow-triangle': 'growTriangle 1.2s ease-out forwards',
+        'grow-mobile': 'growTriangleMobile 1.2s ease-out forwards',
+      },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        sans: ['Inter', 'Helvetica Neue', 'sans-serif'],
       },
     },
   },

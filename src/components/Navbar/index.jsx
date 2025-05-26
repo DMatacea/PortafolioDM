@@ -74,7 +74,7 @@ function Navbar() {
   ]
 
   return (
-    <nav className="flex md:flex-col items-center justify-between w-full md:w-1/5 md:bg-gray-800 px-4 md:px-6 py-2 md:py-4 fixed bottom-0 md:static z-50 h-[60px] md:h-screen">
+    <nav className="flex md:flex-col items-center justify-between w-full md:w-1/5 md:bg-gray-800 px-4 md:px-6 py-2 md:py-4 fixed bottom-0 md:static z-50 h-[60px] md:h-screen border-gray-500 border-r-[1px]">
       {/* Título solo visible en desktop */}
       <div className="hidden md:block text-xl font-semibold text-white mb-4">
         <Link to="/">Front-End Developer</Link>

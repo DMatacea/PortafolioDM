@@ -60,7 +60,7 @@ function Ecommerce() {
                         </Link>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">Ecommerce Moderno</h1>
                     </div>
-                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left mb-4">Ecommerce Moderno</h1>
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl hidden md:flex font-bold text-center md:text-left mb-4">Ecommerce Moderno</h1>
                     <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-center md:text-left">
                         Plataforma con autenticación, catálogo y gestion de compras
                     </p>
